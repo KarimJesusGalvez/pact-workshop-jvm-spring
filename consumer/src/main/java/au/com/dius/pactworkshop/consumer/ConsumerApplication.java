@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 public class ConsumerApplication {
 
 	public static void main(String[] args) {
-		LoggerFactory.getLogger(ConsumerApplication.class).info("Consumer Started");
+		LoggerFactory.getLogger(ConsumerApplication.class).debug("Consumer Started");
 		SpringApplication.run(ConsumerApplication.class, args);
 	}
 

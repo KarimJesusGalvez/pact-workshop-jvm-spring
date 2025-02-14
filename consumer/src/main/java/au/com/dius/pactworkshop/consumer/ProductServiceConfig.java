@@ -1,5 +1,6 @@
 package au.com.dius.pactworkshop.consumer;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +12,7 @@ public class ProductServiceConfig {
 
     @Bean
     RestTemplate productRestTemplate(@Value("${provider.port:8085}") int port) {
+        LoggerFactory.getLogger(ProductServiceConfig.class).info("Creating Rest endpoint in port {}", port);
         return new RestTemplateBuilder().rootUri(String.format("http://localhost:%d", port)).build();
     }
 }
