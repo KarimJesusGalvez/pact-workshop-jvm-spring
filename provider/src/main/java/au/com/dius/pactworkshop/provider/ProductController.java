@@ -19,7 +19,7 @@ public class ProductController {
         this.productRepository = productRepository;
     }
 
-    @GetMapping("products")
+    @GetMapping("prod")
     public List<Product> getAllProducts() {
         return productRepository.fetchAll();
     }
