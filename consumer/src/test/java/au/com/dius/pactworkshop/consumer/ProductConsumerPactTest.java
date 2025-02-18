@@ -52,7 +52,7 @@ public class ProductConsumerPactTest {
                 .status(200)
                 .headers(headers())
                 .body(newJsonBody(object -> {
-                    object.stringType("id", "10");
+                    object.stringType("id", "09");
                     object.stringType("type", "CREDIT_CARD");
                     object.stringType("name", "28 Degrees");
                 }).build())
