@@ -34,3 +34,6 @@ task copyPacts(type: Copy) {
 	from('build/pacts/')
 	into('../provider/src/test/resources/pacts/')
 }
+ext {
+	pact_do_not_track = true
+}
